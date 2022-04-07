@@ -1,10 +1,8 @@
 from pyowm import OWM
-from pyowm.utils import config
-from pyowm.utils import timestamps
 
 
 def get_server(city):
-	f = open('key.txt','r')
+	f = open('key.txt', 'r')
 	text = f.read()
 	f.close()
 	owm = OWM(text)

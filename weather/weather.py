@@ -1,5 +1,4 @@
-
-class Weather():
+class Weather:
 	__k = [range(23), range(23, 68), range(68, 113), range(113, 156),
 		   range(156, 203), range(203, 248), range(248, 293),
 		   range(293, 338), range(338, 361)]
@@ -16,7 +15,7 @@ class Weather():
 		self.__temp = w.temperature('celsius')
 		self.__rain = w.rain
 		self.__clouds = w.clouds
-		self.__wind_d = self.windDeg(w.wind()['deg'])
+		self.__wind_d = self.wind_deg(w.wind()['deg'])
 		self.q = w.wind()['deg']
 
 	def set(self):
@@ -31,9 +30,8 @@ class Weather():
 			st += (self.__string[x] + str(data[x]) + self.__ci[x] + '\n')
 		return st
 
-	def windDeg(self, deg):
+	def wind_deg(self, deg):
 		w = ''
-		m = []
 		count = 0
 		for val in self.__k:
 			for y in val:
