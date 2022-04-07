@@ -29,7 +29,7 @@ class AppTextEdit(Tk):
         self.v_menu.add_command(label = 'theme')
         self.v_menu.add_command(label = 'view')
         self.h_menu = Menu(self.mainmenu, tearoff = 0)
-        self.h_menu.add_command(label = 'help')
+        self.h_menu.add_command(label = 'about', command = self.about)
         self.mainmenu.add_cascade(label = 'file', menu = self.f_menu)
         self.mainmenu.add_cascade(label = 'edit', menu = self.e_menu)
         self.mainmenu.add_cascade(label = 'view', menu = self.v_menu)
@@ -38,6 +38,9 @@ class AppTextEdit(Tk):
         self.text_field.pack(expand = True, fill = BOTH)
         self.status_bar = Label(self, background = '#ECECEC', borderwidth = 2)
         self.status_bar.pack(side = BOTTOM, fill = X)
+
+    def about(self):
+        messagebox.showinfo('Notepad', 'version 1.0')
 
     def delete_field(self):
         self.text_field.delete(1.0, END)
