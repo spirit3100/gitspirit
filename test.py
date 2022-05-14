@@ -1,1 +1,1 @@
-print('Hay')
+print('Hay Maks')
